@@ -1,0 +1,17 @@
+{
+  "source_page": "https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes",
+  "files": [
+    {
+      "name": "Indian_pines_corrected.mat",
+      "original_url": "https://www.ehu.eus/ccwintco/uploads/6/67/Indian_pines_corrected.mat",
+      "download_url": "https://huggingface.co/datasets/danaroth/indian_pines/resolve/b96c10a/Indian_pines_corrected.mat",
+      "sha256": "ec2f8808710919d566f70f0d4aa885aae1ddfd42b734aba71c5e12ca65450939"
+    },
+    {
+      "name": "Indian_pines_gt.mat",
+      "original_url": "https://www.ehu.eus/ccwintco/uploads/c/c4/Indian_pines_gt.mat",
+      "download_url": "https://huggingface.co/datasets/danaroth/indian_pines/resolve/b96c10a/Indian_pines_gt.mat",
+      "sha256": "65c4687a8ab04f6da4789799bc3bc4f6e88bccac3ed6a2e6ae367e5e6b9e429c"
+    }
+  ]
+}

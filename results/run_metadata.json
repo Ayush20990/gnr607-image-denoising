@@ -1,0 +1,40 @@
+{
+  "arguments": {
+    "image": "data/Indian_pines_corrected.mat",
+    "mat_key": "indian_pines_corrected",
+    "bands": [
+      20,
+      50,
+      100,
+      180
+    ],
+    "k": 9,
+    "window": 5,
+    "trials": 3,
+    "seed": 607,
+    "noise_parameter": "std",
+    "output": "results"
+  },
+  "source_shape": [
+    145,
+    145,
+    200
+  ],
+  "bands_one_based": [
+    20,
+    50,
+    100,
+    180
+  ],
+  "noise_levels_percent": [
+    5,
+    10,
+    20
+  ],
+  "boundary": "replicate",
+  "center_included": true,
+  "mse_reference": "original before adding noise",
+  "clipping": false,
+  "rng": "Park-Miller 16807",
+  "seed_formula": "seed + zero_based_trial*1000003 + one_based_band*1009"
+}
