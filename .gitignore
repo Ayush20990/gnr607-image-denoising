@@ -5,3 +5,9 @@ __pycache__/
 .env.*
 .DS_Store
 Thumbs.db
+
+# Rebuildable large experiment arrays and local render output
+experiments/**/temp/
+experiments/**/*.npz
+experiments/**/results_w*/
+experiments/satellite/data/Netherlands_ESA_source.jpg

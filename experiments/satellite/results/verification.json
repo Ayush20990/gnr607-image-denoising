@@ -1,0 +1,7 @@
+{
+  "stored_mse_checks": 18,
+  "noise_bounds_and_sd": "pass",
+  "fixed_crop_pixels": "pass",
+  "summary_means_and_sd": "pass",
+  "manual_algorithm_equivalence_cases": 9
+}

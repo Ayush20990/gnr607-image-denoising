@@ -1,5 +1,54 @@
 # GNR 607: uniform-noise removal using KNN and averaging
 
+## New presentation and experiment variants
+
+The repository now includes two additional, independently reproducible experiments.
+The original Indian Pines project below is preserved.
+
+| Variant | Presentation | Report | Results |
+| --- | --- | --- | --- |
+| Photographs: grayscale + RGB, 512 × 512 | [Download PPTX](experiments/photographs/GNR607_Photographs_Presentation.pptx) | [HTML report](experiments/photographs/report.html) | [CSV](experiments/photographs/results/summary.csv) |
+| Sentinel-2: farmland + urban, 768 × 768 | [Download PPTX](experiments/satellite/GNR607_Satellite_Presentation.pptx) | [HTML report](experiments/satellite/report.html) | [CSV](experiments/satellite/results/summary.csv) |
+
+![Photograph presentation cover](experiments/photographs/preview.png)
+![Satellite presentation cover](experiments/satellite/preview.png)
+
+Download/clone the repository to open HTML reports locally; GitHub shows HTML source.
+The decks, editable build sources, input images/crops, all candidate scores, test-trial
+CSVs and PNG comparisons are included. Large floating-point NPZ files are regenerated
+by running the experiment and are not committed.
+
+### Run either new variant
+
+```powershell
+cd experiments/satellite
+# Or: cd experiments/photographs
+python -m pip install -r requirements.txt
+python run_experiment.py
+python build_deliverables.py
+# Optional user-selected parameters (separate output directory):
+python run_experiment.py --window 5 --k 18
+```
+
+The revised runners use NumPy for speed, with checks against the retained manual
+algorithm. They select matched window/k settings on validation noise, then report
+three fresh noise realizations. This is calibration on known images, not evaluation
+on unseen scenes. It is distinct from the original manual implementation below.
+
+The satellite inputs are two crops of **one ESA Sentinel-2 false-colour display
+composite**, not raw calibrated spectral bands. Native source pixels are retained;
+no claim about the processed JPEG's exact ground sampling distance is made.
+Contains modified Copernicus Sentinel data (2016), processed by ESA. Crops and
+filtered image derivatives: [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/).
+[Source and crop manifest](experiments/satellite/data/source_manifest.json).
+Photograph sources and attribution are documented in the corresponding report.
+
+The measured limitations remain visible: for the urban crop at 5% and 10% noise,
+both filters increase MSE over the noisy baseline. At 20%, mean filtering wins on
+farmland and KNN wins on the urban crop. No numerical results were altered for styling.
+
+## Original Indian Pines implementation
+
 This project adds controlled uniform noise to remotely sensed image bands,
 implements two spatial filters manually, and compares their reconstruction MSE
 at 5%, 10%, and 20% noise. Python is used. All algorithm code is in `core.py`.

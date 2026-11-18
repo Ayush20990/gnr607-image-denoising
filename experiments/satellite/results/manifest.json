@@ -1,0 +1,72 @@
+{
+  "images": [
+    {
+      "name": "farmland",
+      "shape": [
+        768,
+        768,
+        3
+      ],
+      "sha256": "739a3ae751142202b0b88474c65a7ffd9beded5dd1b1fe07dd05cad1e5a5707e",
+      "channel_means": [
+        172.60110643174914,
+        36.256496853298614,
+        18.839921739366318
+      ]
+    },
+    {
+      "name": "urban",
+      "shape": [
+        768,
+        768,
+        3
+      ],
+      "sha256": "c8d4f713c58d801c5ae13de4e084d920d76ae55937046aa1d8c323113cff6a23",
+      "channel_means": [
+        80.1929694281684,
+        43.997794257269966,
+        32.8275638156467
+      ]
+    }
+  ],
+  "selection": "Minimum average of KNN and mean validation MSE; paired window; per image and noise level. Validation seed 60700. Test seeds 60701,60702,60703. Same images, independent noise; not unseen-scene validation.",
+  "display": "Fixed 0..255; clipping/rounding only PNG export. NPZ arrays and MSE unmodified.",
+  "settings": [
+    {
+      "image": "farmland",
+      "noise_percent": 5,
+      "window": 3,
+      "k": 3
+    },
+    {
+      "image": "farmland",
+      "noise_percent": 10,
+      "window": 3,
+      "k": 8
+    },
+    {
+      "image": "farmland",
+      "noise_percent": 20,
+      "window": 3,
+      "k": 8
+    },
+    {
+      "image": "urban",
+      "noise_percent": 5,
+      "window": 3,
+      "k": 3
+    },
+    {
+      "image": "urban",
+      "noise_percent": 10,
+      "window": 3,
+      "k": 3
+    },
+    {
+      "image": "urban",
+      "noise_percent": 20,
+      "window": 3,
+      "k": 7
+    }
+  ]
+}

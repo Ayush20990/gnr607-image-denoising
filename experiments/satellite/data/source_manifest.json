@@ -1,0 +1,27 @@
+{
+  "source_page": "https://www.esa.int/ESA_Multimedia/Images/2019/10/The_Netherlands",
+  "download": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/10/the_netherlands/20813142-1-eng-GB/The_Netherlands.jpg",
+  "source_dimensions": [
+    9725,
+    10223
+  ],
+  "sha256": "0de75627ee26033ab4536ca800952af9f12aef9a40ea82982b960d24c6069734",
+  "credit": "Contains modified Copernicus Sentinel data (2016), processed by ESA. Cropped and synthetically noised/filtered for this project.",
+  "licence": "CC BY-SA 3.0 IGO",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+  "crop_boxes_xyxy": {
+    "farmland": [
+      6000,
+      800,
+      6768,
+      1568
+    ],
+    "urban": [
+      6400,
+      3000,
+      7168,
+      3768
+    ]
+  },
+  "processing": "Native decoded JPEG pixels cropped without resizing; saved losslessly as PNG. 8-bit RGB false-colour display composite, not calibrated reflectance. Exact output ground sampling distance is not established from this JPEG."
+}
